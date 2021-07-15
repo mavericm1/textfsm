@@ -215,6 +215,12 @@ class TextFSMOptions(object):
     def OnSaveRecord(self):
       self.value.value = list(self._value)
 
+  class Int(OptionBase):
+    """Value constitutes will only be typeset to integer."""
+
+    def OnSaveRecord(self):
+      self.value.value = int(self._value)
+
 
 class TextFSMValue(object):
   """A TextFSM value.
